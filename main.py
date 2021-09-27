@@ -23,14 +23,15 @@ def lietotaja_ievade():
     PVN_summa = produkta_cena + darba_samaksa * PVN / 100
     rekina_summa = produkta_cena + darba_samaksa + PVN_summa
 
-    putin = [str(produkta_cena),str(PVN_summa), str(rekina_summa)]
+    meow = [format(produkta_cena),format(PVN_summa),format(rekina_summa)]
 
-    x=""
-    y=[produkta_cena,PVN_summa,rekina_summa]
-    write(x.join(y))
-    print(lietotaja_ievade(y))
 
     f = open("rekins.txt", "w")
+    f.write("Produkta cena: " + format(produkta_cena, ",.2f") + "€")
+    f.write("\n")
+    f.write("PVN summa: " + format(PVN_summa, ",.2f")+ "€")
+    f.write("\n")
+    f.write("rekina_summa: " + format(rekina_summa, ",.2f")+ "€")
     f.write()
     f.close()
 
